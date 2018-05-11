@@ -1,0 +1,13 @@
+{
+  "name": "Uktz Bot",
+  "description": "The official Discord bot for the Modzy Keys discord server.",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.3.2",
+    "request": "2.85.0"
+  }
+}
