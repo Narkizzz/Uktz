@@ -7,7 +7,7 @@
 const Discord = require('discord.js');
 const request = require('request');
 const client = new Discord.Client();
-const prefix = 'k.';
+const prefix = '?';
 
 const commands = [
     // Random
@@ -277,7 +277,7 @@ client.on('message', message => {
         else {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'That command is not defined for `help` to check. Use **`k.help`** to see commands.');
+            embed.addField('Error', 'That command is not defined for `help` to check. Use **`?help`** to see commands.');
             message.channel.sendEmbed(embed);
         }
     } else
@@ -288,7 +288,7 @@ client.on('message', message => {
                 if (!JSON.parse(body)) {
                     let embed = new Discord.RichEmbed();
                     embed.setColor('#ff0000');
-                    embed.addField('Error', 'That username does not exist, use **`k.help userinfo`** for more.');
+                    embed.addField('Error', 'That username does not exist, use **`?help userinfo`** for more.');
                     message.channel.sendEmbed(embed);
                     return;
                 }
@@ -326,7 +326,7 @@ client.on('message', message => {
                 if (kaid.substring(0, 5) !== 'kaid_') {
                     let embed = new Discord.RichEmbed();
                     embed.setColor('#ff0000');
-                    embed.addField('Error', 'That username returned no KAID, use **`k.help userinfo`** for more.');
+                    embed.addField('Error', 'That username returned no KAID, use **`?help userinfo`** for more.');
                     message.channel.sendEmbed(embed);
                 }
             });
@@ -334,12 +334,12 @@ client.on('message', message => {
         if (args.length !== 1) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'The correct usage is **`k.userInfo <username>`**.');
+            embed.addField('Error', 'The correct usage is **`?userInfo <username>`**.');
             message.channel.sendEmbed(embed);
         } else {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'That command is not defined for `userInfo`. Use **`k.help userInfo`** for more.');
+            embed.addField('Error', 'That command is not defined for `userInfo`. Use **`?help userInfo`** for more.');
             message.channel.sendEmbed(embed);
         }
 
@@ -371,12 +371,12 @@ client.on('message', message => {
         if (args.length !== 1) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'The correct usage is **`k.programData <program-id>`**.');
+            embed.addField('Error', 'The correct usage is **`?programData <program-id>`**.');
             message.channel.sendEmbed(embed);
         } else {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'That program ID does not exist. Use **`k.help programData`** for more.');
+            embed.addField('Error', 'That program ID does not exist. Use **`?help programData`** for more.');
             message.channel.sendEmbed(embed);
         }
     } else 
@@ -430,13 +430,13 @@ client.on('message', message => {
         if (page === null) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'Incorrect usage, use **`k.help browse`** for more.');
+            embed.addField('Error', 'Incorrect usage, use **`?help browse`** for more.');
             message.channel.sendEmbed(embed);
         } else
         if (args.length !== 1) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'Incorrect usage, use **`k.help browse`** for more.');
+            embed.addField('Error', 'Incorrect usage, use **`?help browse`** for more.');
             message.channel.sendEmbed(embed);
         }
     } else
@@ -477,7 +477,7 @@ client.on('message', message => {
         if (args.length !== 1) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'The correct usage is **`k.discussion <username>`**.');
+            embed.addField('Error', 'The correct usage is **`?discussion <username>`**.');
             message.channel.sendEmbed(embed);
         }
     } else
@@ -523,7 +523,7 @@ client.on('message', message => {
                 if (kaid.substring(0, 5) !== 'kaid_') {
                     let embed = new Discord.RichEmbed();
                     embed.setColor('#ff0000');
-                    embed.addField('Error', 'That username returned no KAID, use **`k.help badges`** for more.');
+                    embed.addField('Error', 'That username returned no KAID, use **`?help badges`** for more.');
                     message.channel.sendEmbed(embed);
                 }
             });
@@ -531,7 +531,7 @@ client.on('message', message => {
         if (args.length !== 1) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', 'The correct usage is **`k.badges <username>`**.');
+            embed.addField('Error', 'The correct usage is **`?badges <username>`**.');
             message.channel.sendEmbed(embed);
         }
     } else
@@ -554,7 +554,7 @@ client.on('message', message => {
         if (args.length !== 1) {
             let embed = new Discord.RichEmbed();
             embed.setColor('#ff0000');
-            embed.addField('Error', ':x: The correct usage is **`k.badgeInfo <badge name>`**.');
+            embed.addField('Error', ':x: The correct usage is **`?badgeInfo <badge name>`**.');
             message.channel.sendEmbed(embed);
         }
     } else
