@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'creator') {
-    	message.reply('Sunt creat de Uktss! :D');
+    	message.reply('Sunt creat de Uktss! :cookie:');
   	}
 });
 
